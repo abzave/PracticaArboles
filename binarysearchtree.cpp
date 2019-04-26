@@ -33,12 +33,25 @@ void BinarySearchTree::addNode(BinaryNode *raiz, BinaryNode* node){
         root = node;
         return;
     }
-    if(node->getID() <= root->getID()){
-        addNode(root->left, node);
+    else if(node->getID() < root->getID()){
+        addNodoHijo(&(root->left), node);
         return;
     }
     else {
-        addNode(root->right, node);
+        addNodoHijo(&(root->left), node);
+        return;
+    }
+}
+
+void BinarySearchTree::addNodoHijo(BinaryNode **raiz, BinaryNode *node){
+    if((*raiz) == nullptr){
+        *raiz = node;
+        return;
+    }else if(node->getID() < (*raiz)->getID()){
+        addNodoHijo(&((*raiz)->left), node);
+        return;
+    }else{
+        addNodoHijo(&((*raiz)->right), node);
         return;
     }
 }

@@ -8,6 +8,7 @@ struct BinarySearchTree{
     ClientNode* search(int id);
     ClientNode* searchFromNode(int id, BinaryNode* node);
     void addNode(BinaryNode *raiz, BinaryNode* node);
+    void addNodoHijo(BinaryNode **raiz, BinaryNode *node);
     void printTree(BinaryNode *raiz);
 };
 
