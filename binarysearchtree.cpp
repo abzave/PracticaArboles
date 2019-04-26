@@ -38,7 +38,7 @@ void BinarySearchTree::addNode(BinaryNode *raiz, BinaryNode* node){
         return;
     }
     else {
-        addNodoHijo(&(root->left), node);
+        addNodoHijo(&(root->right), node);
         return;
     }
 }
