@@ -30,8 +30,9 @@ int main(){
 
             Client *client = new Client(ID, wage, name, province, civil);
             ClientNode *cliente = new ClientNode(client);
+            BinaryNode *nodo = new BinaryNode(cliente);
 
-            tree->addNode(tree->root, cliente);
+            tree->addNode(tree->root, nodo);
             lista.add(cliente);
 
             console->printClientAddedMessage();

@@ -28,17 +28,17 @@ ClientNode* BinarySearchTree::searchFromNode(int id, BinaryNode* node){
     }
 }
 
-void BinarySearchTree::addNode(BinaryNode *raiz, ClientNode* node){
-    if(raiz == nullptr){
-        raiz = new BinaryNode(node);
+void BinarySearchTree::addNode(BinaryNode *raiz, BinaryNode* node){
+    if(root == nullptr){
+        root = node;
         return;
     }
-    if(node->client->id <= raiz->id){
-        addNode(raiz, node);
+    if(node->getID() <= root->getID()){
+        addNode(root->left, node);
         return;
     }
     else {
-        addNode(raiz, node);
+        addNode(root->right, node);
         return;
     }
 }

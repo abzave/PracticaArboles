@@ -7,7 +7,7 @@ struct BinarySearchTree{
     BinarySearchTree();
     ClientNode* search(int id);
     ClientNode* searchFromNode(int id, BinaryNode* node);
-    void addNode(BinaryNode *raiz, ClientNode* node);
+    void addNode(BinaryNode *raiz, BinaryNode* node);
     void printTree(BinaryNode *raiz);
 };
 
