@@ -1,4 +1,4 @@
-#include <binarysearchtree.h>
+#include "binarysearchtree.h"
 
 BinarySearchTree::BinarySearchTree(){
     root = nullptr;
@@ -25,5 +25,26 @@ ClientNode* BinarySearchTree::searchFromNode(int id, BinaryNode* node){
         return searchFromNode(id, node->left);
     }else{
         return searchFromNode(id, node->right);
+    }
+}
+
+void BinarySearchTree::addNode(BinaryNode *raiz, ClientNode* node){
+    if(raiz == nullptr){
+        raiz = new BinaryNode(node);
+        return;
+    }
+    if(node->client->id <= raiz->id){
+        addNode(raiz, node);
+    }
+    else {
+        addNode(raiz, node);
+    }
+}
+
+void BinarySearchTree::printTree(BinaryNode *raiz){
+    if(raiz != nullptr){
+        printTree(raiz->left);
+        raiz->toString();
+        printTree(raiz->right);
     }
 }

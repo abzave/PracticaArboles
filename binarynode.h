@@ -1,6 +1,7 @@
 #ifndef BINARYNODE_H
 #define BINARYNODE_H
-#include <clientnode.h>
+#include "clientnode.h"
+#include <iostream>
 
 struct BinaryNode{
     ClientNode* node;
@@ -10,6 +11,7 @@ struct BinaryNode{
     BinaryNode();
     BinaryNode(ClientNode* node);
     int getID();
+    void toString();
 };
 
 #endif // BINARYNODE_H

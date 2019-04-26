@@ -1,12 +1,14 @@
 #include <iostream>
-#include <binarysearchtree.h>
-#include <interface.h>
+#include "binarysearchtree.h"
+#include "linkedlist.h"
+#include "interface.h"
 
 using namespace std;
 
 int main(){
     Interface* console = new Interface();
     BinarySearchTree* tree = new BinarySearchTree();
+    LinkedList lista;
     while(true){
         console->printMenu();
         int option = console->askOption();
@@ -26,6 +28,13 @@ int main(){
             std::string civil = console->askForString();
             console->clearScreen();
 
+            Client *client = new Client(ID, wage, name, province, civil);
+            ClientNode *cliente = new ClientNode(client);
+//            std::cout << cliente->client->toString();
+
+            tree->addNode(tree->root, cliente);
+            lista.add(cliente);
+            std::cout << lista.first->client->toString();
             console->printClientAddedMessage();
             console->wait();
         }else if(option == SEARCH){
@@ -41,6 +50,7 @@ int main(){
             console->print(data);
             console->wait();
         }else if(option == PRINT){
+            tree->printTree(tree->root);
             console->wait();
         }
     }
