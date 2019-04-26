@@ -1,4 +1,4 @@
-#include "binarynode.h"
+#include <binarynode.h>
 
 BinaryNode::BinaryNode(){
     node = nullptr;
@@ -7,8 +7,8 @@ BinaryNode::BinaryNode(){
     id = 0;
 }
 
-BinaryNode::BinaryNode(ClientNode* node){
-    this->node = node;
+BinaryNode::BinaryNode(ClientNode* pNode){
+    node = pNode;
     left = nullptr;
     right = nullptr;
     id = node->client->getID();

@@ -1,4 +1,4 @@
-#include "binarysearchtree.h"
+#include <binarysearchtree.h>
 
 BinarySearchTree::BinarySearchTree(){
     root = nullptr;
@@ -35,9 +35,11 @@ void BinarySearchTree::addNode(BinaryNode *raiz, ClientNode* node){
     }
     if(node->client->id <= raiz->id){
         addNode(raiz, node);
+        return;
     }
     else {
         addNode(raiz, node);
+        return;
     }
 }
 

@@ -1,7 +1,7 @@
 #include <iostream>
-#include "binarysearchtree.h"
-#include "linkedlist.h"
-#include "interface.h"
+#include <binarysearchtree.h>
+#include <linkedlist.h>
+#include <interface.h>
 
 using namespace std;
 
@@ -30,11 +30,10 @@ int main(){
 
             Client *client = new Client(ID, wage, name, province, civil);
             ClientNode *cliente = new ClientNode(client);
-//            std::cout << cliente->client->toString();
 
             tree->addNode(tree->root, cliente);
             lista.add(cliente);
-            std::cout << lista.first->client->toString();
+
             console->printClientAddedMessage();
             console->wait();
         }else if(option == SEARCH){

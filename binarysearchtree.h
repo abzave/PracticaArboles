@@ -1,6 +1,6 @@
 #ifndef SEARCHBINARYTREE_H
 #define SEARCHBINARYTREE_H
-#include "binarynode.h"
+#include <binarynode.h>
 
 struct BinarySearchTree{
     BinaryNode* root;

@@ -1,6 +1,6 @@
 #ifndef BINARYNODE_H
 #define BINARYNODE_H
-#include "clientnode.h"
+#include <clientnode.h>
 #include <iostream>
 
 struct BinaryNode{
