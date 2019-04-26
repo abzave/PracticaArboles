@@ -17,6 +17,12 @@ struct Interface{
     void printOptionError();
     void printContinueQuestion();
     void printYesOrNoError();
+    void printIDMessage();
+    void printNameMessage();
+    void printWageMessage();
+    void printProvinceMessage();
+    void printCivilMessage();
+    void printClientAddedMessage();
     void wait();
     void print(std::string message);
     int askOption();

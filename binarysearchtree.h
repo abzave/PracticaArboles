@@ -5,8 +5,6 @@
 struct BinarySearchTree{
     BinaryNode* root;
     BinarySearchTree();
-    void add(BinaryNode* node);
-    void addToParent(BinaryNode* node, BinaryNode** parent);
     ClientNode* search(int id);
     ClientNode* searchFromNode(int id, BinaryNode* node);
 };

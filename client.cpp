@@ -9,12 +9,12 @@ Client::Client(){
     civil = "";
 }
 
-Client::Client(int id, int wage, std::string name, std::string lastName,
+Client::Client(int id, double wage, std::string name,
                std::string province, std::string civil){
     this->id = id;
     this->wage =  wage;
-    this->name = name;
-    this->lastName = lastName;
+    this->name = name.substr(0, name.find(' '));
+    this->lastName = name.substr(name.find(' ') + 1, name.length());
     this->province = province;
     this->civil = civil;
 }

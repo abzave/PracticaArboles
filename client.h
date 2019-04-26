@@ -4,13 +4,13 @@
 
 struct Client{
     int id;
-    int wage;
+    double wage;
     std::string name;
     std::string lastName;
     std::string province;
     std::string civil;
     Client();
-    Client(int id, int wage, std::string name, std::string lastName,
+    Client(int id, double wage, std::string name,
            std::string province, std::string civil);
     int getID();
     std::string toString();

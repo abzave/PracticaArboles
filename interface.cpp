@@ -32,6 +32,30 @@ void Interface::printYesOrNoError(){
     std::cout << "Error: Solo puede ingresar Y o N: ";
 }
 
+void Interface::printIDMessage(){
+    std::cout << "Ingrese la cedula: ";
+}
+
+void Interface::printNameMessage(){
+    std::cout << "Ingrese el nombre: ";
+}
+
+void Interface::printWageMessage(){
+    std::cout << "Ingrese el salario: ";
+}
+
+void Interface::printCivilMessage(){
+    std::cout << "Ingrese el civil: ";
+}
+
+void Interface::printProvinceMessage(){
+    std::cout << "Ingrese la provincia: ";
+}
+
+void Interface::printClientAddedMessage(){
+    std::cout << "Cliente añadido!" << std::endl;
+}
+
 void Interface::wait(){
     system("pause");
 }
@@ -59,7 +83,7 @@ int Interface::askForInt(){
 
 std::string Interface::askForString(){
     std::string answer;
-    std::cin >> answer;
+    std::getline(std::cin >> std::ws, answer);
     return answer;
 }
 
